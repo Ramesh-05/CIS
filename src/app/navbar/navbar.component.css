@@ -1,0 +1,9 @@
+#div{
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}

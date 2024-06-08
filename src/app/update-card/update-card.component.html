@@ -1,0 +1,138 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0" routerLink="/home" routerLinkActive="active">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/user-list" routerLinkActive="active">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">User</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/category-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Categories</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/card-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Card Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/company-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Company Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/org-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Organization Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/change-password" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Change Password</span> </a>
+                    </li>
+                </ul>
+                <hr>
+                
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="container bg-light w-75"><br>
+                <h2 class="text-center mb-4">Update Card Details</h2>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- <div class="mb-3">
+                                <label for="name" class="form-label">CardType</label>
+                                <select name="cardType" class="form-control">
+                                    <option>--select--</option>
+                                    <option *ngFor="let cardT of cardType" value="{{cardT.id}}">
+                                        {{cardT.name}}
+                                    </option>
+                                </select>
+                            </div>
+                         -->
+                         <div class="mb-3">
+                            <label for="cardType" class="form-label">Card Type</label>
+                            <select name="cardType" class="form-control" [(ngModel)]="cardDetail.cardType">
+                                <option value="">-- Select --</option>
+                                <option *ngFor="let cardT of cardType" [value]="cardT.name">{{cardT.name}}</option>
+                            </select>
+                        </div>
+                        
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="cardDetail.name" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">CompanyName</label>
+                                <input type="text" class="form-control" id="companyName" placeholder="Enter companyName" [(ngModel)]="cardDetail.companyName" name="password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="Enter Address" [(ngModel)]="cardDetail.address" name="address">
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Designation</label>
+                                <input type="text" class="form-control" id="designation" placeholder="Designation" [(ngModel)]="cardDetail.designation" name="designation">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobile" class="form-label">Department</label>
+                                <input type="text" class="form-control" id="department" placeholder="Enter department" [(ngModel)]="cardDetail.department" name="department">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telephone" class="form-label">Residential Number</label>
+                                <input type="text" class="form-control" id="residentialNumber" placeholder="Enter residential Number" [(ngModel)]="cardDetail.residentialNumber" name="residentialNumber">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="emaiId" class="form-label">Email ID</label>
+                                <input type="text" class="form-control" id="emaiId" placeholder="Enter Email ID" [(ngModel)]="cardDetail.email" name="emaiId">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                                <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Mobile Number" [(ngModel)]="cardDetail.mobileNum" name="mobileNumber">
+                            </div>
+                            <div class="mb-3">
+                                <label for="fax" class="form-label">Category</label>
+                                <input type="text" class="form-control" id="fax" placeholder="Enter Fax" [(ngModel)]="cardDetail.category" name="fax">
+                            </div>
+                            <div class="mb-3">
+                                <label for="officeEmailId" class="form-label">Office Email ID</label>
+                                <input type="text" class="form-control" id="officeEmailId" placeholder="Enter Office Email ID" [(ngModel)]="cardDetail.offEmail" name="officeEmailId">
+                            </div>
+                            <div class="mb-3">
+                                <label for="officeWebsite" class="form-label">Office Website</label>
+                                <input type="text" class="form-control" id="officeWebsite" placeholder="Enter Office Website" [(ngModel)]="cardDetail.offWebsite" name="officeWebsite">
+                            </div>
+                            <div class="mb-3">
+                                <label for="branches" class="form-label">Branches</label>
+                                <input type="text" class="form-control" id="branches" placeholder="Enter Branches" [(ngModel)]="cardDetail.branches" name="branches">
+                            </div>
+                            <div class="mb-3">
+                                <label for="partner" class="form-label">Partner</label>
+                                <input type="text" class="form-control" id="partner" placeholder="Enter Partner" [(ngModel)]="cardDetail.partner" name="partner">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-2">
+                        <button type="submit" class="btn btn-primary">Update</button>&nbsp;&nbsp;&nbsp;
+                        <a href="#" routerLink="/card-list" routerLinkActive="active">
+                          <button class="btn btn-danger"><i class='bx bx-x'></i> Cancel</button>
+                          </a>
+                    </div><br>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+

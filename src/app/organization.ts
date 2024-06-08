@@ -1,0 +1,30 @@
+export class Organization {
+    id:number;
+    orgCode:string;
+    place:string;
+    phoneNum:number;
+    email:string;
+    dateOfReg:string;
+    cstNo:string;
+    ceCode:string;
+    drclNo:string;
+    panGir:string;
+    eximCode:string;
+    gstRate:string;
+    orgName:string;
+    address1:string;
+    address2:string;
+    pincode:number;
+    teleEx:string;
+    grams:string;
+    regNo:string;
+    inceptionDate:string;
+    gstNo:string;
+    cerNo:string;
+    fromDate:string;
+    tdsAccount:string;
+    panExt:string;
+    exciseDutyRate:string;
+    cstRate:string;
+    logo:string;
+}

@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0" routerLink="/home" routerLinkActive="active">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/user-list" routerLinkActive="active">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">User</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/category-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Categories</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/card-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Card Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/company-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Company Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/org-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Organization Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/change-password" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Change Password</span> </a>
+                    </li>
+                </ul>
+                <hr>
+                
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="container mt-5 bg-light w-50">
+                <div class="row">
+                  <div class="col-md-6 offset-md-3"><br>
+                    <h2 class="text-center mb-4">Update Categories Data</h2>
+                    <form (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="category.categoryName" placeholder="Enter your name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">shortName</label>
+                        <input type="text" class="form-control" id="shortName" name="shortName" [(ngModel)]="category.shortName" placeholder="Enter your short name" required>
+                      </div>
+                      <br>
+                      <button type="submit" class="btn btn-primary btn-block">Submit</button>&nbsp;&nbsp;&nbsp;
+                      <a href="#" routerLink="/category-list" routerLinkActive="active">
+                        <button class="btn btn-danger"><i class='bx bx-x'></i> Cancel</button>
+                        </a>
+                    </form><br>
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </div>
+</div>
+

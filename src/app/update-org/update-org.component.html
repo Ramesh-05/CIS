@@ -1,0 +1,171 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0" routerLink="/home" routerLinkActive="active">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/user-list" routerLinkActive="active">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">User</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/category-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Categories</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/card-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Card Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/company-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Company Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/org-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Organization Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/change-password" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Change Password</span> </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="container bg-light w-75"><br>
+                <h2 class="text-center mb-4">Update Organization Information</h2>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="organizationName" class="form-label">Organization Name</label>
+                                <input type="text" class="form-control" id="organizationName" placeholder="Enter Organization Name" [(ngModel)]="organization.orgName" name="organizationname">
+                            </div>
+                            <div class="mb-3">
+                                <label for="organizationCode" class="form-label">Organization Code</label>
+                                <input type="text" class="form-control" id="organizationCode" placeholder="Enter Organization Code" [(ngModel)]="organization.orgCode" name="organizationCode">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address1" class="form-label">Address 1</label>
+                                <input type="text" class="form-control" id="address1" placeholder="Enter Address 1" [(ngModel)]="organization.address1" name="address1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address2" class="form-label">Address 2</label>
+                                <input type="text" class="form-control" id="address2" placeholder="Enter Address 2" [(ngModel)]="organization.address2" name="address2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="place" class="form-label">Place</label>
+                                <input type="text" class="form-control" id="place" placeholder="Enter Place" [(ngModel)]="organization.place" name="place">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pinCode" class="form-label">Pincode</label>
+                                <input type="text" class="form-control" id="pinCode" placeholder="Enter Pincode" [(ngModel)]="organization.pincode" name="pinCode">
+                            </div>
+                            <div class="mb-3">
+                                <label for="phoneNo" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phoneNo" placeholder="Enter Phone Number" [(ngModel)]="organization.phoneNum" name="phoneNo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="teleEx" class="form-label">Tele Ex</label>
+                                <input type="text" class="form-control" id="teleEx" placeholder="Enter Tele Ex" [(ngModel)]="organization.teleEx" name="teleEx">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" placeholder="Enter Email" [(ngModel)]="organization.email" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="logo" class="form-label">Logo</label>
+                                <input type="text" class="form-control" id="logo" placeholder="Enter Logo" [(ngModel)]="organization.logo" name="logo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="TDSAccount" class="form-label">TDS Account</label>
+                                <input type="text" class="form-control" id="TDSAccount" placeholder="Enter TDS Account" [(ngModel)]="organization.tdsAccount" name="TDSAccount">
+                            </div>
+                            <div class="mb-3">
+                                <label for="PANGIR" class="form-label">PANGIR</label>
+                                <input type="text" class="form-control" id="PANGIR" placeholder="Enter PANGIR" [(ngModel)]="organization.panGir" name="PANGIR">
+                            </div>
+                            <div class="mb-3">
+                                <label for="PANEXT" class="form-label">PANEXT</label>
+                                <input type="text" class="form-control" id="PANEXT" placeholder="Enter PANEXT" [(ngModel)]="organization.panExt" name="PANEXT">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="dateOfReg" class="form-label">Date of Registration</label>
+                                <input type="date" class="form-control" id="dateOfReg" placeholder="Enter Date of Registration" [(ngModel)]="organization.dateOfReg" name="dateOfReg">
+                            </div>
+                            <div class="mb-3">
+                                <label for="grams" class="form-label">Grams</label>
+                                <input type="text" class="form-control" id="grams" placeholder="Enter Grams" [(ngModel)]="organization.grams" name="grams">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inceptionDate" class="form-label">Inception Date</label>
+                                <input type="date" class="form-control" id="inceptionDate" placeholder="Enter Inception Date" [(ngModel)]="organization.inceptionDate" name="inceptionDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CSTNo" class="form-label">CST No</label>
+                                <input type="text" class="form-control" id="CSTNo" placeholder="Enter CST No" [(ngModel)]="organization.cstNo" name="CSTNo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="GSTNo" class="form-label">GST No</label>
+                                <input type="text" class="form-control" id="GSTNo" placeholder="Enter GST No" [(ngModel)]="organization.gstNo" name="GSTNo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CECode" class="form-label">CE Code</label>
+                                <input type="text" class="form-control" id="CECode" placeholder="Enter CE Code" [(ngModel)]="organization.ceCode" name="CECode">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CERNo" class="form-label">CER No</label>
+                                <input type="text" class="form-control" id="CERNo" placeholder="Enter CER No" [(ngModel)]="organization.cerNo" name="CERNo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="DRCLNo" class="form-label">DRCL No</label>
+                                <input type="text" class="form-control" id="DRCLNo" placeholder="Enter DRCL No" [(ngModel)]="organization.drclNo" name="DRCLNo">
+                            </div>
+                            <div class="mb-3">
+                                <label for="FormDate" class="form-label">Form Date</label>
+                                <input type="date" class="form-control" id="FormDate" placeholder="Enter Form Date" [(ngModel)]="organization.fromDate" name="FormDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="EXIMCode" class="form-label">EXIM Code</label>
+                                <input type="text" class="form-control" id="EXIMCode" placeholder="Enter EXIM Code" [(ngModel)]="organization.eximCode" name="EXIMCode">
+                            </div>
+                            <div class="mb-3">
+                                <label for="CSTRate" class="form-label">CST Rate</label>
+                                <input type="number" class="form-control" id="CSTRate" placeholder="Enter CST Rate" [(ngModel)]="organization.cstRate" name="CSTRate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="GSTRate" class="form-label">GST Rate</label>
+                                <input type="number" class="form-control" id="GSTRate" placeholder="Enter GST Rate" [(ngModel)]="organization.gstRate" name="GSTRate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ExciseDutyRate" class="form-label">Excise Duty Rate</label>
+                                <input type="number" class="form-control" id="ExciseDutyRate" placeholder="Enter Excise Duty Rate" [(ngModel)]="organization.exciseDutyRate" name="ExciseDutyRate">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;&nbsp;
+                        <a href="#" routerLink="/org-list" routerLinkActive="active">
+                          <button class="btn btn-danger"><i class='bx bx-x'></i> Cancel</button>
+                          </a>
+                    </div><br>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+

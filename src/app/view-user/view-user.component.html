@@ -1,0 +1,96 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link align-middle px-0"  routerLink="/home" routerLinkActive="active">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/user-list" routerLinkActive="active">
+                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">User</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/category-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Categories</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/card-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Card Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/company-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Company Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/org-list" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Organization Details</span> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle" routerLink="/change-password" routerLinkActive="active">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Change Password</span> </a>
+                    </li>
+                </ul>
+                <hr>
+               
+            </div>
+        </div>
+        <div class="col py-3">
+            <div class="container">
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h3 class="card-title">View UserDetails</h3>
+                        <div class="user-details-table">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2" class="text-center">User Data</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>User MemberId:</b></td>
+                                        <td>{{userData.memberId}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>User Name:</b></td>
+                                        <td>{{userData.name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>User Email:</b></td>
+                                        <td>{{userData.email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>User Address:</b></td>
+                                        <td>{{userData.contactAddress}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Mobile Number:</b></td>
+                                        <td>{{userData.mobileNumber}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Tele Phone:</b></td>
+                                        <td>{{userData.telephoneNumber}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#" routerLink="/user-list" routerLinkActive="active">
+                                <button class="btn btn-success"><i class='bx bx-arrow-back'></i> Back</button>
+                                </a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
